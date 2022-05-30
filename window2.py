@@ -4,7 +4,7 @@ import webbrowser
 from core import *
 
 def btn_clicked():
-    print("Button Clicked")
+     webbrowser.open("https://github.com/SumitMusale/Virtual-Mouse-with-AI-Opencv")
 
 #here
 def OpenHelp():
