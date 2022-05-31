@@ -1,16 +1,13 @@
-# Imports
-#import tkinter as Mouse
-#from PIL import ImageTk, Image
-#import webbrowser
+
 
 import cv2 #opencv-python is a Python open-source library, which is used for computer vision
 import mediapipe as mp #it is opensource fremwork from google for hand & body tracking
 import pyautogui #it helps with simulating mouse and keybourd
 import math 
 from enum import IntEnum #it is to assign values to hand parts like fingers
-#from ctypes import cast, POINTER #it is to bring c functions in python 
-#from comtypes import CLSCTX_ALL comtypes ======== **comtypes** is a lightweight Python COM package, based on the ctypes_ FFI library, **comtypes** allows to define, call, and implement custom and dispatch-based COM interfaces in pure Python. It works on 32-bit and 64-bit Windows.
-#from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume #volume control of windows (copy)
+from ctypes import cast, POINTER #it is to bring c functions in python 
+from comtypes import CLSCTX_ALL #comtypes ======== **comtypes** is a lightweight Python COM package, based on the ctypes_ FFI library, **comtypes** allows to define, call, and implement custom and dispatch-based COM interfaces in pure Python. It works on 32-bit and 64-bit Windows.
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume #volume control of windows (copy)
 from google.protobuf.json_format import MessageToDict #Contains routines for printing protocol messages in JSON format (copy)
 import screen_brightness_control as sbcontrol #A Python tool for controlling the brightness of your monitor.(copy)
 
@@ -405,56 +402,6 @@ class GestureController:
         GestureController.cap.release()
         cv2.destroyAllWindows()
 
-# uncomment to run directly
-
-#gui
-#def callback(url):
- #   webbrowser.open_new(url)
-
 def automatic():
     gc1 = GestureController()
     gc1.start()
-
-
-#import sys
-
-#def qut():
-#    gc = GestureController()
-#    gc.sys.exit()
-"""
-root = Mouse.Tk()
-
-root.geometry("360x600")
-root.title("Virtual Mouse")
-image = ImageTk.PhotoImage(Image.open("tap.png"))
-img_label = Mouse.Label(image=image)
-img_label.grid(row=0, columnspan=2, pady=10)
-
-label = Mouse.Label(root, text="Welcome to Virtual Mouse", font='system 18 bold')
-label.grid(row=1, columnspan=2, pady=5)
-
-button = Mouse.Button(root, text="control mouse (Auto)",fg="green", font='TkDefaultFont 12 bold', command=automatic, height="4")
-button.grid(row=2, columnspan=2, pady=20, padx=10)
-
-
-button = Mouse.Button(root,text="Close",fg="red", font='TkDefaultFont 12 bold', command=root.quit, height="4", width="16")
-button.grid(row=3,column=1, pady=20)
-
-#button = Mouse.Button(root,text="Close",fg="red", font='TkDefaultFont 12 bold', command=root.quit, height="4", width="16")
-#button.grid(row=3,columnspan=2, pady=20)
-
-#q1
-#button = Mouse.Button(root,text="Close1",fg="red", font='TkDefaultFont 12 bold', command=GestureController.cap.release(), height="4", width="16")
-#button.grid(row=3,columnspan=2, pady=20)
-#q2
-button = Mouse.Button(root,text="Close2",fg="red", font='TkDefaultFont 12 bold', command=qut, height="4", width="16")
-button.grid(row=3,column=2, pady=20)
-#here
-
-link1 = Mouse.Label(root, text="How to use?", fg="blue", cursor="hand2", font='TkDefaultFont 12 bold')
-link1.grid(row=5, columnspan=2)
-link1.bind("<Button-1>", lambda e: callback("about.html"))
-
-root.mainloop()
-
-"""
