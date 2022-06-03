@@ -14,7 +14,7 @@ Python "MYVMAI.py"
 
 **If you don't want to use it then you can close it by clicking close button**
 
-# Disclaimer=
+# Disclaimer
 After you started applicaton:- 
 
 # Step to close camera window:-
